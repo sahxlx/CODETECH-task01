@@ -1,0 +1,52 @@
+# simple calculator 
+#This code is codetech internship
+# Function to be perform addition
+def add(x, y):
+    return x + y
+
+# Function to perform subtraction
+def subtract(x, y):
+    return x - y
+
+# Function to perform multiplication
+def multiply(x, y):
+    return x * y
+
+# Function to perform division
+def divide(x, y):
+    if y == 0:
+        return "Error! Division by zero is not allowed."
+    else:
+        return x / y
+def calculator():
+    print("welcome to simple calculator")
+    print("Select operation:")
+    print("1. Addition")
+    print("2. Subtraction")
+    print("3. Multiplication")
+    print("4. Division")
+
+
+#Take inpute from user
+# print(input("Choose the operation:"))
+    choice = input("Enter choice (a/b/c/d): ")
+
+    
+
+    if choice in ('a', 'b', 'c', 'd'):
+        num1 = int(input("Enter first number: "))
+        num2 = int(input("Enter second number: "))
+
+        if choice == 'a':
+            print(f"{num1} + {num2} = {add(num1, num2)}")
+        elif choice == 'b':
+            print(f"{num1} - {num2} = {subtract(num1, num2)}")
+        elif choice == 'c':
+            print(f"{num1} * {num2} = {multiply(num1, num2)}")
+        elif choice == 'd':
+            print(f"{num1} / {num2} = {divide(num1, num2)}")
+    else:
+        print("Invalid input. Please enter a valid number (a/b/c/d).")
+
+# Run the calculator
+calculator()
